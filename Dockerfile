@@ -1,7 +1,5 @@
 FROM wilkesystems/steamcmd:debian
 
-VOLUME ["/home"]
-
 RUN apt -y update
 RUN apt -y install wget unzip python3 nano curl
 
@@ -22,11 +20,7 @@ env TICKRATE="128"
 env MAXPLAYERS="32"
 
 COPY install.sh /home
-COPY start.sh /home
 
 RUN chmod +x /home/install.sh
-RUN chmod +x /home/start.sh
 
-RUN bash /home/install.sh
-
-CMD [ "bash", "/home/start.sh" ]
+CMD [ "bash", "/home/install.sh" ]
