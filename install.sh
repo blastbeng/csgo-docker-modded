@@ -46,7 +46,7 @@ echo "echo \"env.cfg executed\"" >> /home/csgo/csgo/cfg/env.cfg
 # Uncomment below for custom admins
 echo "Dynamically writing /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini"
 echo "\"STEAM_0:1:58154498\"	\"9:z\"	// blast." > /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
-echo "\"STEAM_0:1:155831497\"	\"8:z\"	// Maial" >> /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
+echo "\"STEAM_0:1:xxxxxxxxx\"	\"8:z\"	// xxxxx" >> /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
 # echo "\"STEAM_0:0:3\"	\"8:z\"	// Third user" >> /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
 
 cd /home/csgo/csgo
