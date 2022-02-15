@@ -8,6 +8,4 @@ services:
       - TZ=Europe/Rome
       - PUID=1000
       - GUID=1000
-    volumes:
-      - ./data:/home
     image: csgo:blast
