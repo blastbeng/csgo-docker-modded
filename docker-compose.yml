@@ -3,6 +3,11 @@ services:
   csgo:
     container_name: csgo
     network_mode: host
+    environment:
+      - COMPOSE_HTTP_TIMEOUT=900
+      - TZ=Europe/Rome
+      - PUID=1000
+      - GUID=1000
     volumes:
       - ./data:/home
     image: csgo:blast

@@ -47,9 +47,9 @@ echo "" >> /home/csgo/csgo/cfg/env.cfg
 echo "echo \"env.cfg executed\"" >> /home/csgo/csgo/cfg/env.cfg
 
 # Uncomment below for custom admins
-# echo "Dynamically writing /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini"
-# echo "\"STEAM_0:0:56050\"	\"9:z\"	// Kus" > /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
-# echo "\"STEAM_0:0:2\"	\"8:z\"	// Second user" >> /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
+echo "Dynamically writing /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini"
+echo "\"STEAM_0:1:58154498\"	\"9:z\"	// blast." > /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
+echo "\"STEAM_0:1:155831497\"	\"8:z\"	// Maial" >> /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
 # echo "\"STEAM_0:0:3\"	\"8:z\"	// Third user" >> /home/csgo/csgo/addons/sourcemod/configs/admins_simple.ini
 
 cd /home/csgo/csgo
@@ -58,6 +58,8 @@ cp gamerulescvars.txt.example gamerulescvars.txt
 cp gamemodes_server.txt.example gamemodes_server.txt
 
 cd /home/csgo
+
+curl --silent --output "automate.sh" "https://raw.githubusercontent.com/kus/csgo-modded-server-assets/master/automate.sh" && chmod +x automate.sh && bash automate.sh
 
 echo "Starting server"
 ./srcds_run \
@@ -68,6 +70,7 @@ echo "Starting server"
     -tickrate $TICKRATE \
     -port $PORT \
     -maxplayers_override $MAXPLAYERS \
+    -authkey $API_KEY \
     +game_type 0 \
     +game_mode 0 \
     +mapgroup mg_active \
