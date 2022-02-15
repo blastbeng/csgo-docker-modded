@@ -1,6 +1,6 @@
 FROM wilkesystems/steamcmd:debian
 
-VOLUME ["/home", "/root"]
+VOLUME ["/home"]
 
 RUN apt -y update
 RUN apt -y install wget unzip python3 nano curl
