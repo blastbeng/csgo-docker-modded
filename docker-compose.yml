@@ -5,9 +5,4 @@ services:
     network_mode: host
     volumes:
       - ./data:/home
-    ports:
-      - 8560:8560
-      - 27015:27015 
-      - 27015:27015/udp
-      - 27020:27020/udp
     image: csgo:blast
