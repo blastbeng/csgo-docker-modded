@@ -70,7 +70,7 @@ echo "Starting server"
     -tickrate $TICKRATE \
     -port $PORT \
     -maxplayers_override $MAXPLAYERS \
-    -authkey $API_KEY \
+    -authkey $API_KEY
     +game_type 0 \
     +game_mode 0 \
     +mapgroup mg_active \
