@@ -19,8 +19,8 @@ env PORT="27015"
 env TICKRATE="128"
 env MAXPLAYERS="32"
 
-COPY install.sh /home
+COPY install.sh ./
 
-RUN chmod +x /home/install.sh
+RUN chmod +x ./install.sh
 
-CMD [ "bash", "/home/install.sh" ]
+CMD [ "bash", "./install.sh" ]
